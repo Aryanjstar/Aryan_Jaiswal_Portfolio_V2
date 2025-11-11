@@ -37,8 +37,7 @@ export const Hero = () => {
 					/>
 
 					<p className="mb-4 text-center text-sm md:text-lg md:tracking-wider lg:text-2xl">
-						Hi, I&apos;m {links.ownerName}, a Coder & MERN developer based in
-						India.
+						Hi, I&apos;m {links.ownerName}, a Problem Solver & AI enthusiast, MERN developer based in India.
 					</p>
 
 					<Link href="#projects" className="md:mt-10">

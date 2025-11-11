@@ -14,8 +14,7 @@ import {
 	SiExpress,
 	SiFlask,
 	SiTailwindcss,
-	SiAmazonaws,
-	SiMicrosoftazure,
+	SiAmazon as SiAmazonaws,
 	SiGooglecloud,
 	SiMongodb,
 	SiTensorflow,
@@ -25,7 +24,7 @@ import {
 	SiNumpy,
 	SiGit,
 	SiGithub,
-	SiVisualstudiocode,
+	SiVscodium as SiVisualstudiocode,
 	SiDocker,
 	SiLinux,
 	SiPostman,
@@ -34,9 +33,24 @@ import {
 	SiThreedotjs,
 	SiNextdotjs,
 	SiNetlify,
+	SiRedis,
+	SiKubernetes,
+	SiJest,
+	SiCypress,
 } from "react-icons/si";
-import { FaJava } from "react-icons/fa";
-import { FaCog, FaLaptopCode, FaBrain, FaProjectDiagram } from "react-icons/fa";
+import {
+	FaJava,
+	FaMicrosoft,
+	FaCog,
+	FaLaptopCode,
+	FaBrain,
+	FaProjectDiagram,
+	FaMobile,
+	FaServer,
+	FaCodeBranch,
+	FaRobot,
+	FaLink,
+} from "react-icons/fa";
 
 import { socialMedia } from "@/data";
 import { MagicButton } from "@/components/ui/magic-button";
@@ -53,30 +67,84 @@ export const Resume = () => {
 
 	const experience = [
 		{
-			company: "InfoKalash",
-			position: "UI/UX Developer Intern",
-			duration: "Jan 2025 – Feb 2025",
+			company: "Exotel",
+			position: "Tech Intern | Gen AI",
+			duration: "Oct 2025 – Present",
 			location: "Remote",
 			responsibilities: [
-				"Redesigned core user workflows in Figma for 3 client portals, resulting in 40% reduction in user-reported navigation confusion during usability testing sessions.",
-				"Led user research sessions with 15+ target users, synthesizing feedback to pivot initial design approach, contributing to 30% projected increase in user engagement metrics.",
-				"Applied responsive design principles across 10+ device breakpoints, ensuring seamless cross-platform accessibility and modern design standards.",
+				"Built full-stack Custom TestCase & Scenario Management using FastAPI, Redis (persistent storage) and React/TypeScript; implemented CRUD APIs, embedded scenarios, additions, KPI configs, UUID/timestamp, and Redis-backed job execution.",
+				"Integrated system with test pipeline: WebSocket real-time updates, cron-driven post-call analysis, secure tunneling via Cloudflare/Ngrok, Redis orchestration, automated job orchestration pipelines, and test recording ingestion for verification.",
+			],
+		},
+		{
+			company: "Joveo",
+			position: "AI/ML Intern | Supply Automation",
+			duration: "Oct 2025",
+			location: "Remote",
+			responsibilities: [
+				"Developed and deployed an RAG-based automation pipeline using n8n, Gemini embeddings, and PostgreSQL (pgvector); parsed email threads, extracted entities, and indexed 384-d vectors for contextual retrieval in AI-driven workflows.",
+				"Integrated LLM summarization, WhatsApp and Telegram alerts, automated monitoring, and reports with insights.",
+			],
+		},
+		{
+			company: "InfoKalash",
+			position: "UI/UX Developer Intern",
+			duration: "Jan 2025",
+			location: "Remote",
+			responsibilities: [
+				"Led usability redesign reducing navigation confusion by 40% through revamped Figma workflows, improved IA, component libraries, and developer handoffs; coordinated design docs and interactive prototypes for rapid implementation.",
+				"Conducted research with 15+ users, synthesized feedback into A/B-testable prototypes that increased engagement by 30%.",
 			],
 		},
 		{
 			company: "Infosys Springboard",
-			position: "Plant Disease Classification Project Intern",
-			duration: "Mar 2024 – July 2024",
+			position: "AI/ML Intern | Plant Disease Classification",
+			duration: "Mar 2024 – June 2024",
 			location: "Remote",
 			responsibilities: [
-				"Crafted a website using HTML, CSS, and Flask, integrating a CNN Sequential model for plant disease classification with 90%+ accuracy across training and validation sets.",
-				"Developed and optimized a CNN model on 60,000+ plant images, using advanced data augmentation techniques to achieve a 92% precision rate, ensuring reliable disease classification.",
-				"Enhanced backend performance by refactoring user authentication and image upload functionalities, resulting in a 50% reduction in response time and a 30% improvement in page load speed, ensuring a scalable and efficient user experience.",
+				"Built and productionized a CNN-based plant disease classifier with Python and Flask REST APIs; developed reproducible training pipelines on 60,000+ images, applied augmentations and class-weighting, achieving 90% accuracy and 92% precision.",
+				"Optimized backend and deployment to improve reliability and latency—cut API time by 50% and load by 30%—via JWT auth, async queues, Redis caching, batched queries, Docker CI/CD, and k-fold validation for inference stability.",
 			],
 		},
 	];
 
 	const projects = [
+		{
+			title: "DevTinder",
+			technologies: [
+				{ name: "JavaScript", icon: <SiJavascript className="w-4 h-4" /> },
+				{ name: "React.js", icon: <SiReact className="w-4 h-4" /> },
+				{ name: "Node.js", icon: <SiNodedotjs className="w-4 h-4" /> },
+				{ name: "Express.js", icon: <SiExpress className="w-4 h-4" /> },
+				{ name: "MongoDB", icon: <SiMongodb className="w-4 h-4" /> },
+			],
+			links: {
+				live: "https://black-cliff-0fbc18c0f.3.azurestaticapps.net/",
+				github: "https://github.com/Aryanjstar/DevTinder",
+			},
+			description: [
+				"Engineered a scalable MERN-based developer matching platform using vectorized skill embeddings with ANN search, optimized indexing and caching for low-latency queries, and built real-time chat using Socket.IO for seamless collaboration.",
+				"Implemented secure JWT + Google OAuth authentication, integrated Razorpay webhooks, deployed backend on Azure via CI/CD using Docker, and crafted a mobile-first, component-driven responsive UI with Tailwind CSS for enhanced UX.",
+			],
+		},
+		{
+			title: "AURA – Agentic AI for Finance",
+			technologies: [
+				{ name: "Node.js", icon: <SiNodedotjs className="w-4 h-4" /> },
+				{ name: "Python", icon: <SiPython className="w-4 h-4" /> },
+				{ name: "React.js", icon: <SiReact className="w-4 h-4" /> },
+				{ name: "GCP", icon: <SiGooglecloud className="w-4 h-4" /> },
+			],
+			links: {
+				demo: "https://youtu.be/48CdosQA8H4",
+				github: "https://github.com/Aryanjstar/AURA---THE-FINANCE-AI",
+			},
+			description: [
+				"Constructed a scalable multi-agent AI system with five specialized agents (Strategist, Quant, Advisor, etc.) using the Google Gemini API to deliver personalized financial strategies in real-time.",
+				"Engineered a microservices-based platform deployed on Google Cloud App Engine, integrating a secure Go-based MCP server for processing unstructured financial data.",
+				"Built a real-time analytics dashboard with React.js and D3.js, integrating LLM-driven sentiment analysis to automate insights and reduce manual review time by 90%.",
+			],
+		},
 		{
 			title: "AI Career Navigator",
 			technologies: [
@@ -87,37 +155,18 @@ export const Resume = () => {
 				{ name: "Three.js", icon: <SiThreedotjs className="w-4 h-4" /> },
 			],
 			links: {
+				live: "https://ai-career-navigator-backend.azurewebsites.net",
 				github: "https://github.com/Aryanjstar/AI-Career-Navigator",
-				demo: "https://www.youtube.com/watch?v=t_e-CtLxn_Q",
 			},
 			description: [
-				"Designed and implemented core algorithms for a production-ready AI career platform using Azure OpenAI GPT-4.1, tested locally by 100+ users, providing personalized resume insights and tailored career guidance.",
-				"Architected a scalable microservices infrastructure (React/TypeScript, Flask) on Azure App Service and AI Search, handling 500+ document processing operations with 99% uptime in testing.",
-				"Built advanced ML features including career chat, resume analysis, skill gap detection and dynamic interview generation; received positive peer feedback and demonstrated a 60% reduction in career preparation time.",
-			],
-		},
-		{
-			title: "Personal Portfolio Website",
-			technologies: [
-				{ name: "React.js", icon: <SiReact className="w-4 h-4" /> },
-				{ name: "Next.js", icon: <SiNextdotjs className="w-4 h-4" /> },
-				{ name: "Tailwind CSS", icon: <SiTailwindcss className="w-4 h-4" /> },
-				{ name: "Three.js", icon: <SiThreedotjs className="w-4 h-4" /> },
-			],
-			links: {
-				live: "https://aryanjaiswal.me",
-				github: "https://github.com/Aryanjstar/Aryan_Jaiswal_Portfolio",
-			},
-			description: [
-				"Constructed a full-stack interactive portfolio using Next.js and Three.js, achieving 95+ scores on Google Lighthouse for performance and accessibility; deployed via GitHub-integrated CI/CD pipeline on Netlify.",
-				"Composed immersive 3D visuals and interactive animations using Three.js, optimizing rendering performance across 10+ device breakpoints for a seamless user experience.",
-				"Integrated comprehensive SEO enhancements and responsive design principles, resulting in 40% faster load times and significantly improved user engagement metrics.",
+				"Designed and productionized a comprehensive AI career assistant using Azure OpenAI GPT-4.1 with RAG (chunking, embeddings, vector store) and dynamic interview generators; validated by 100+ users for resume feedback and gap analysis.",
+				"Deployed and optimized microservices on Azure App Service with queue workers and Azure AI Search, ensuring 99% uptime while handling 500+ operations via batching and sharding; integrated A/B pipelines, reducing user prep time by 60%.",
 			],
 		},
 	];
 
 	const technicalSkills = {
-		"CS Fundamentals": [
+		"CS Fundamentals & Languages": [
 			{
 				name: "Data Structures",
 				icon: <FaProjectDiagram className="w-5 h-5" />,
@@ -125,59 +174,65 @@ export const Resume = () => {
 			{ name: "Algorithms", icon: <FaBrain className="w-5 h-5" /> },
 			{ name: "OOP", icon: <FaLaptopCode className="w-5 h-5" /> },
 			{ name: "Operating Systems", icon: <FaCog className="w-5 h-5" /> },
-		],
-		Languages: [
-			{ name: "C++", icon: <SiCplusplus className="w-5 h-5" /> },
-			{ name: "JavaScript", icon: <SiJavascript className="w-5 h-5" /> },
-			{ name: "TypeScript", icon: <SiTypescript className="w-5 h-5" /> },
-			{ name: "Python", icon: <SiPython className="w-5 h-5" /> },
 			{ name: "Java", icon: <FaJava className="w-5 h-5" /> },
-			{ name: "HTML", icon: <SiHtml5 className="w-5 h-5" /> },
-			{ name: "CSS", icon: <SiCss3 className="w-5 h-5" /> },
+			{ name: "Python", icon: <SiPython className="w-5 h-5" /> },
+			{ name: "C++", icon: <SiCplusplus className="w-5 h-5" /> },
 			{ name: "SQL", icon: <SiMysql className="w-5 h-5" /> },
 		],
-		"Frameworks/Libraries": [
-			{ name: "React.js", icon: <SiReact className="w-5 h-5" /> },
-			{ name: "Node.js", icon: <SiNodedotjs className="w-5 h-5" /> },
-			{ name: "Express.js", icon: <SiExpress className="w-5 h-5" /> },
-			{ name: "Flask", icon: <SiFlask className="w-5 h-5" /> },
+		Frontend: [
+			{ name: "React", icon: <SiReact className="w-5 h-5" /> },
+			{ name: "HTML", icon: <SiHtml5 className="w-5 h-5" /> },
+			{ name: "CSS", icon: <SiCss3 className="w-5 h-5" /> },
 			{ name: "Tailwind CSS", icon: <SiTailwindcss className="w-5 h-5" /> },
+			{ name: "JavaScript", icon: <SiJavascript className="w-5 h-5" /> },
+			{ name: "TypeScript", icon: <SiTypescript className="w-5 h-5" /> },
+			{ name: "Responsive Design", icon: <FaMobile className="w-5 h-5" /> },
 		],
-		"Cloud/Databases": [
-			{ name: "AWS", icon: <SiAmazonaws className="w-5 h-5" /> },
-			{ name: "Azure", icon: <SiMicrosoftazure className="w-5 h-5" /> },
-			{ name: "GCP", icon: <SiGooglecloud className="w-5 h-5" /> },
-			{ name: "MySQL", icon: <SiMysql className="w-5 h-5" /> },
+		"Backend & APIs": [
+			{ name: "Node.js", icon: <SiNodedotjs className="w-5 h-5" /> },
+			{ name: "Express", icon: <SiExpress className="w-5 h-5" /> },
+			{ name: "Flask", icon: <SiFlask className="w-5 h-5" /> },
+			{ name: "RESTful APIs", icon: <FaServer className="w-5 h-5" /> },
 			{ name: "MongoDB", icon: <SiMongodb className="w-5 h-5" /> },
+			{ name: "MySQL", icon: <SiMysql className="w-5 h-5" /> },
+			{ name: "Redis", icon: <SiRedis className="w-5 h-5" /> },
 		],
-		"ML/AI": [
-			{ name: "Azure OpenAI", icon: <SiOpenai className="w-5 h-5" /> },
-			{ name: "GPT-4.1", icon: <SiOpenai className="w-5 h-5" /> },
-			{ name: "TensorFlow", icon: <SiTensorflow className="w-5 h-5" /> },
-			{ name: "PyTorch", icon: <SiPytorch className="w-5 h-5" /> },
-			{ name: "Scikit-learn", icon: <SiScikitlearn className="w-5 h-5" /> },
-			{ name: "Pandas", icon: <SiPandas className="w-5 h-5" /> },
-			{ name: "NumPy", icon: <SiNumpy className="w-5 h-5" /> },
+		"Cloud & DevOps": [
+			{ name: "Azure", icon: <FaMicrosoft className="w-5 h-5" /> },
+			{ name: "AWS", icon: <SiAmazonaws className="w-5 h-5" /> },
+			{ name: "GCP", icon: <SiGooglecloud className="w-5 h-5" /> },
+			{ name: "Docker", icon: <SiDocker className="w-5 h-5" /> },
+			{ name: "Kubernetes", icon: <SiKubernetes className="w-5 h-5" /> },
+			{ name: "CI/CD", icon: <FaCodeBranch className="w-5 h-5" /> },
+			{ name: "Linux", icon: <SiLinux className="w-5 h-5" /> },
 		],
-		"Tools & DevOps": [
+		"Testing & Tools": [
 			{ name: "Git", icon: <SiGit className="w-5 h-5" /> },
 			{ name: "GitHub", icon: <SiGithub className="w-5 h-5" /> },
-			{ name: "VS Code", icon: <SiVisualstudiocode className="w-5 h-5" /> },
-			{ name: "Docker", icon: <SiDocker className="w-5 h-5" /> },
-			{ name: "Linux", icon: <SiLinux className="w-5 h-5" /> },
 			{ name: "Postman", icon: <SiPostman className="w-5 h-5" /> },
-			{ name: "Figma", icon: <SiFigma className="w-5 h-5" /> },
+			{ name: "Jest", icon: <SiJest className="w-5 h-5" /> },
+			{ name: "Cypress", icon: <SiCypress className="w-5 h-5" /> },
+		],
+		"AI/ML & Libraries": [
+			{ name: "LLM", icon: <SiOpenai className="w-5 h-5" /> },
+			{ name: "TensorFlow", icon: <SiTensorflow className="w-5 h-5" /> },
+			{ name: "PyTorch", icon: <SiPytorch className="w-5 h-5" /> },
+			{ name: "scikit-learn", icon: <SiScikitlearn className="w-5 h-5" /> },
+			{ name: "Pandas", icon: <SiPandas className="w-5 h-5" /> },
+			{ name: "NumPy", icon: <SiNumpy className="w-5 h-5" /> },
+			{ name: "Hugging Face", icon: <FaRobot className="w-5 h-5" /> },
+			{ name: "LangChain", icon: <FaLink className="w-5 h-5" /> },
 		],
 	};
 
 	const achievements = [
-		"Finalist – Level Supermind Hackathon, Mumbai: Top 2% (500/25,000+ participants)",
-		"Competitive Programming: GFG college rank 14, 1-year streak on LeetCode and GFG",
-		"Microsoft AI Odyssey: Completed Levels 1 & 2; ranked in top 5% globally",
-		"Featured Developer: Spotlighted on Azure Developer Community's YouTube channel for AI innovation",
-		"Google Cloud Study Jams: Mentored 30+ participants; completed Cloud and GenAI tracks",
-		"Founder & President – MLSA Chapter, IIIT Dharwad: Built and led the official Microsoft student community on campus",
-		"Certifications: Deep Learning Specialization (Andrew Ng), Stanford Innovation & Entrepreneurship",
+		"Spotlight Award Winner – Microsoft JS AI Build-a-thon: As a Troop Lead, I mentored 80+ developers and led the creation of AI Career Navigator to assist students in job and internship preparation.",
+		"Finalist – Google Cloud Agentic AI Day Hackathon: Among top 3.5% (2,000/57,000+) for building AURA, a multi-agent financial platform using Gemini, Node.js, Go, and Fi's Model Context Protocol (MCP) server.",
+		"Letter of Recommendation (Microsoft): Received LOR from Pablo Veramendi, Global Director, Audience Evangelism at Microsoft, recognizing contributions in event organization, workshop creation, community outreach, and mentoring.",
+		"Finalist – Level Supermind Hackathon: Top 2% (500/25,000+) for BuzzHive, an AI-driven social media analytics platform.",
+		"Gold-MSA, Founder & President – MSA Chapter, IIIT Dharwad: As a Gold Microsoft Student Ambassador, led the official community, managed a 60+ core team, and grew MSA Nexus to 350+ members for tech support and learning.",
+		"Competitive Programming: GFG college rank 8; solved 400+ DSA problems with a 1-year streak on LeetCode and GFG.",
+		"IIITians Network: Key contributor to India's largest IIIT students network (50k+ members); drove growth and engagement while continuing to support initiatives, share ideas, and strengthen collaboration across the community.",
 	];
 
 	return (
@@ -188,7 +243,7 @@ export const Resume = () => {
 						My <span className="text-purple">Resume</span>
 					</h1>
 
-					<Link href="/Aryan_CV.pdf" target="_blank" rel="noreferrer noopener">
+					<Link href="/Aryan_Resume.pdf" target="_blank" rel="noreferrer noopener">
 						<MagicButton
 							title="Resume"
 							icon={<FaDownload />}

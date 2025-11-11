@@ -76,15 +76,33 @@ export const gridItems = [
 export const projects = [
 	{
 		id: 1,
+		title: "DevTinder",
+		des: "A scalable MERN-based developer matching platform using vectorized skill embeddings with ANN search, optimized indexing and caching for low-latency queries, and built-in real-time chat using Socket.IO for seamless collaboration.",
+		img: "/devtinder.svg",
+		iconLists: ["/re.svg", "/next.svg", "/ts.svg", "/tail.svg", "/c++.svg"],
+		sourceCode: "https://github.com/Aryanjstar/DevTinder",
+		liveLink: "https://black-cliff-0fbc18c0f.3.azurestaticapps.net/",
+	},
+	{
+		id: 2,
+		title: "AURA – Agentic AI for Finance",
+		des: "A scalable multi-agent AI system with five specialized agents (Strategist, Quant, Advisor, etc.) using Google Gemini API to deliver personalized financial strategies in real-time, built with microservices on Google Cloud Platform.",
+		img: "/aura.svg",
+		iconLists: ["/re.svg", "/py.png", "/next.svg", "/tail.svg", "/gc.png"],
+		sourceCode: "https://github.com/Aryanjstar/AURA---THE-FINANCE-AI",
+		demoLink: "https://youtu.be/48CdosQA8H4",
+	},
+	{
+		id: 3,
 		title: "AI Career Navigator",
 		des: "An intelligent career guidance platform that analyzes resumes, detects skill gaps, generates personalized interview questions, and recommends tailored career roadmaps using Azure OpenAI GPT-4.1 and modern web technologies.",
 		img: "/project1.svg",
 		iconLists: ["/py.png", "/re.svg", "/ts.svg", "/three.svg", "/tail.svg"],
 		sourceCode: "https://github.com/Aryanjstar/AI-Career-Navigator",
-		demoLink: "https://www.youtube.com/watch?v=t_e-CtLxn_Q",
+		liveLink: "https://ai-career-navigator-backend.azurewebsites.net",
 	},
 	{
-		id: 2,
+		id: 4,
 		title: "Portfolio Website",
 		des: "A personal developer portfolio designed to showcase my journey, projects, skills, and technical growth. Built using React.js, Next.js, Three.js, and Tailwind CSS with smooth animations, bento-style layout, and dynamic 3D elements.",
 		img: "/project5.svg",
@@ -93,24 +111,25 @@ export const projects = [
 		liveLink: "https://aryanjaiswal.me",
 	},
 	{
-		id: 3,
+		id: 5,
 		title: "BuzzHive",
 		des: "An AI-powered social media analytics platform designed to help content creators, marketers, and brands optimize their content strategy through actionable insights and real-time data using machine learning and NLP.",
 		img: "/project3.svg",
 		iconLists: ["/ts.svg", "/py.png", "/re.svg", "/tail.svg", "/vs.png"],
 		sourceCode: "https://github.com/Aryanjstar/BuzzHive",
+		demoLink: "https://youtu.be/GYnDcdoyIpQ",
 	},
 	{
-		id: 4,
-		title: "MLSA IIIT Dharwad Website",
-		des: "Official web platform for the MLSA Chapter at IIIT Dharwad, providing students with access to curated learning resources, community updates, event announcements, and guidance related to the Microsoft Learn Student Ambassador program.",
+		id: 6,
+		title: "MSA IIIT Dharwad Website",
+		des: "Official web platform for the MSA Chapter at IIIT Dharwad, providing students with access to curated learning resources, community updates, event announcements, and guidance related to the Microsoft Student Ambassador program.",
 		img: "/project4.svg",
 		iconLists: ["/re.svg", "/tail.svg", "/next.svg", "/ts.svg", "/vs.png"],
 		sourceCode: "https://github.com/Aryanjstar/MLSA_IIITDWD",
-		liveLink: "https://aryanjstar.github.io/MLSA_IIITDWD",
+		liveLink: "https://mlsaiiitdwd.netlify.app/",
 	},
 	{
-		id: 5,
+		id: 7,
 		title: "PowerUPResume (PUR)",
 		des: "An intelligent resume analysis platform that leverages advanced NLP algorithms and industry-driven heuristics to evaluate resumes beyond basic formatting, providing detailed insights into job-role compatibility and technical keyword density.",
 		img: "/project2.svg",
@@ -128,7 +147,7 @@ export const testimonials = [
 	},
 
 	{
-		quote: `Successfully completed Levels 1 and 2 of the Microsoft AI Odyssey Challenge in January 2024, with certification in February. Among the 5% of participants to achieve this, I gained hands-on expertise in Azure Vision, AI Document Intelligence, and AI Language, mastering computer vision, NLP, and scalable AI solutions. As an MLSA, my insights on how generative AI drives my success were featured on the Azure Developer Community's YouTube channel.`,
+		quote: `Successfully completed Levels 1 and 2 of the Microsoft AI Odyssey Challenge in January 2024, with certification in February. Among the 5% of participants to achieve this, I gained hands-on expertise in Azure Vision, AI Document Intelligence, and AI Language, mastering computer vision, NLP, and scalable AI solutions. As a Microsoft Student Ambassador, my insights on how generative AI drives my success were featured on the Azure Developer Community's YouTube channel.`,
 		name: "Microsoft",
 		title: "Microsoft AI Odyssey: My Journey to Success",
 		image: "/mic.png",
@@ -137,10 +156,10 @@ export const testimonials = [
 	},
 
 	{
-		quote: `I successfully qualified for Stage 1 of the prestigious AlgoUniversity Technology Fellowship (ATF) 2024, standing out among over 20,000 applicants. As one of the top 4,000 students, placing in the top 20%, I have earned the opportunity to advance to Stage 2 of this competitive fellowship. This accomplishment reflects my technical skills, problem-solving abilities, and commitment to excellence in technology and programming.`,
-		name: "Algo University",
-		title: "Technology Fellowship",
-		image: "/algo.png",
+		quote: `GFG college rank 8; solved 400+ DSA problems with a 1-year streak on LeetCode and GFG. This consistent practice across multiple competitive programming platforms demonstrates strong problem-solving abilities and commitment to mastering data structures and algorithms.`,
+		name: "Competitive Programming",
+		title: "GFG Rank 8 | 400+ Problems | 1-Year Streak",
+		image: "/code.svg",
 	},
 
 	{
@@ -180,31 +199,65 @@ export const testimonials = [
 	},
 
 	{
-		quote: `I am a β-MLSA and the Founder and President of the MLSA Chapter at IIIT Dharwad! 
-
-Microsoft Learn Student Ambassadors (MLSA) is a global community of student leaders who are passionate about technology. As an MLSA, I aim to empower fellow students with the skills, resources, and opportunities to grow in tech through workshops, webinars, and collaborative projects. We're dedicated to fostering a culture of learning and sharing in the tech community!`,
-		name: "Microsoft Learn Student Ambassadors",
-		title: "β-MLSA & Founder, President of MLSA Chapter IIIT Dharwad",
-		image: "/MLSA.png",
-		// link: "https://aryanjstar.github.io/MLSA_IIITDWD",
+		quote: `I am a Gold Microsoft Student Ambassador and the Founder and President of the MSA Chapter at IIIT Dharwad! As a Gold-MSA, I've led the official Microsoft community on campus, managed a 60+ core team, and grew MSA Nexus to 350+ members for tech support and learning. Microsoft Student Ambassadors is a global community of student leaders passionate about technology. Through workshops, webinars, and collaborative projects, we empower fellow students with the skills and opportunities to grow in tech.`,
+		name: "Microsoft Student Ambassadors",
+		title: "Gold-MSA & Founder, President of MSA Chapter IIIT Dharwad",
+		image: "/mic.png",
+	},
+	{
+		quote: `Received a Letter of Recommendation from Pablo Veramendi, Global Director of Audience Evangelism at Microsoft, recognizing my contributions in event organization, workshop creation, community outreach, and mentoring. This acknowledgment reflects my commitment to building and nurturing the tech community at IIIT Dharwad and beyond.`,
+		name: "Microsoft",
+		title: "Letter of Recommendation from Pablo Veramendi (Microsoft)",
+		image: "/mic.png",
+	},
+	{
+		quote: `As a Troop Lead for the Microsoft JS AI Build-a-thon, I mentored 80+ developers and led the creation of AI Career Navigator to assist students in job and internship preparation. Our team won the Spotlight Award for innovation, impact, and technical excellence in building AI-powered solutions for career development.`,
+		name: "Microsoft JS AI Build-a-thon",
+		title: "Spotlight Award & Overall Winner & Troop Lead",
+		image: "/mic.png",
+	},
+	{
+		quote: `Finalist at the Google Cloud Agentic AI Day Hackathon, placing in the top 3.5% (among 2,000 out of 57,000+ participants) for building AURA, a multi-agent financial platform using Gemini, Node.js, Go, and Fi's Model Context Protocol (MCP) server. This recognition showcases expertise in agentic AI systems and cloud-native architectures.`,
+		name: "Google Cloud",
+		title: "Finalist – Google Cloud Agentic AI Day Hackathon",
+		image: "/google.png",
+	},
+	{
+		quote: `Key contributor to IIITians Network, India's largest IIIT students network with 50k+ members. Drove growth and engagement initiatives while continuing to support collaboration, share ideas, and strengthen connections across the community. This platform serves as a vital resource for students across all IIITs to connect, learn, and grow together.`,
+		name: "IIITians Network",
+		title: "Key Contributor & Community Builder",
+		image: "/iiitians.png",
 	},
 ] as const;
 
 export const workExperience = [
 	{
 		id: 1,
-		title: "Plant Disease Classification Project Intern | Infosys Springboard",
-		desc: "Developed a Flask-based plant disease classification app with a CNN model achieving 90%+ accuracy on 60,000+ images. Optimized backend performance, cutting response time by 50% and improving load speed by 30%.",
-		className: "md:col-span-2", // change to md:col-span-2
-		thumbnail: "/exp2.svg",
+		title: "Tech Intern | Gen AI | Exotel",
+		desc: "Built a full-stack Custom TestCase & Scenario Management System using FastAPI, Redis, and React/TypeScript; implemented CRUD APIs, embedded scenarios, KPI configs, WebSocket real-time updates, and cron-driven post-call analysis with secure tunneling.",
+		className: "md:col-span-2",
+		thumbnail: "/exp3.svg",
 	},
 	{
 		id: 2,
-
+		title: "AI/ML Intern | Supply Automation | Joveo",
+		desc: "Developed an end-to-end RAG-based automation pipeline using n8n, Gemini embeddings, and PostgreSQL (pgvector); parsed email threads, extracted entities, and integrated LLM summarization with WhatsApp and Telegram alerts.",
+		className: "md:col-span-2",
+		thumbnail: "/exp4.svg",
+	},
+	{
+		id: 3,
 		title: "UI/UX Developer Intern | InfoKalash",
 		desc: "Redesigned user workflows for 3 client portals using Figma, reducing navigation confusion by 40%. Conducted user research to refine UX and ensured responsive design across 10+ devices.",
 		className: "md:col-span-2",
 		thumbnail: "/exp1.svg",
+	},
+	{
+		id: 4,
+		title: "AI/ML Intern | Plant Disease Classification | Infosys Springboard",
+		desc: "Developed a Flask-based plant disease classification app with a CNN model achieving 90%+ accuracy on 60,000+ images. Optimized backend performance, cutting response time by 50% and improving load speed by 30%.",
+		className: "md:col-span-2",
+		thumbnail: "/exp2.svg",
 	},
 ] as const;
 
