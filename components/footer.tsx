@@ -49,7 +49,7 @@ export const Footer = () => {
 				<p className="text-center text-sm font-light md:text-left md:text-base md:font-normal">
 					Copyright &copy; {new Date().getFullYear()}{" "}
 					<Link
-						href="https://aryan.me"
+						href={links.ownerInstagram}
 						target="_blank"
 						rel="noreferrer noopener"
 						className="text-purple"
@@ -57,7 +57,7 @@ export const Footer = () => {
 						Aryan
 					</Link>{" "}
 					|{" "}
-					<Link href={links.sourceCode} className="underline">
+					<Link href={links.sourceCode} target="_blank" rel="noreferrer noopener" className="underline">
 						Source Code
 					</Link>
 				</p>

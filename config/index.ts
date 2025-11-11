@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 
 export const links = {
-	sourceCode: "https://github.com/Aryanjstar/Aryan_Jaiswal_Portfolio",
+	sourceCode: "https://github.com/Aryanjstar/Aryan_Jaiswal_Portfolio_V2",
 	ownerName: "Aryan",
 	ownerEmail: "aryanjstar3@gmail.com",
+	ownerInstagram: "https://instagram.com/aryanjstar",
 } as const;
 
 export const siteConfig: Metadata = {
