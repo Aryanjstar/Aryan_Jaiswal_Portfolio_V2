@@ -226,7 +226,7 @@ export const testimonials = [
 		quote: `Key contributor to IIITians Network, India's largest IIIT students network with 50k+ members. Drove growth and engagement initiatives while continuing to support collaboration, share ideas, and strengthen connections across the community. This platform serves as a vital resource for students across all IIITs to connect, learn, and grow together.`,
 		name: "IIITians Network",
 		title: "Key Contributor & Community Builder",
-		image: "/iiitians.png",
+		image: "/iiitians.jpg",
 	},
 ] as const;
 
