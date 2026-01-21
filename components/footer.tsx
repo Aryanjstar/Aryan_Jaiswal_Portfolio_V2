@@ -30,10 +30,8 @@ export const Footer = () => {
 					Let&apos;s connect and explore opportunities together!
 				</p>
 
-				<Link
-					href={`mailto:${links.ownerEmail}`}
-					target="_blank"
-					rel="noreferrer noopener"
+				<a
+					href={`mailto:${links.ownerEmail}?subject=Let's Connect!&body=Hi Aryan,%0D%0A%0D%0AI came across your portfolio and would love to connect.%0D%0A%0D%0A`}
 					className="md:mt-10"
 				>
 					<MagicButton
@@ -42,7 +40,7 @@ export const Footer = () => {
 						position="right"
 						asChild
 					/>
-				</Link>
+				</a>
 			</div>
 
 			<div className="relative z-10 mt-16 flex flex-col items-center justify-between gap-6 md:flex-row md:gap-0">
