@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { FaInstagram, FaPlay, FaSpotify, FaHeadphones } from "react-icons/fa6";
-import { IoMusicalNotes } from "react-icons/io5";
+import { FaInstagram, FaPlay, FaSpotify, FaHeadphones, FaArrowLeft } from "react-icons/fa6";
+import { IoMusicalNotes, IoHome } from "react-icons/io5";
 import { BsMusicNoteBeamed } from "react-icons/bs";
 import { HiSparkles } from "react-icons/hi2";
 
@@ -116,6 +116,25 @@ const MusicPattern = ({ className }: { className?: string }) => (
 export default function NotesbyAryan() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-black-100">
+      {/* Floating Back Button */}
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.3, duration: 0.5 }}
+        className="fixed left-4 top-4 z-50 md:left-6 md:top-6"
+      >
+        <Link
+          href="/"
+          className="group flex items-center gap-2 rounded-full border border-purple/30 bg-black-100/80 px-4 py-2.5 backdrop-blur-md transition-all duration-300 hover:border-purple hover:bg-purple/10 hover:shadow-[0_0_20px_rgba(203,172,249,0.2)]"
+        >
+          <FaArrowLeft className="text-sm text-purple transition-transform duration-300 group-hover:-translate-x-1" />
+          <span className="text-sm font-medium text-white-200 transition-colors group-hover:text-white">
+            Portfolio
+          </span>
+          <IoHome className="text-sm text-white-200/50" />
+        </Link>
+      </motion.div>
+
       {/* Spotlights - matching main portfolio */}
       <div>
         <Spotlight
