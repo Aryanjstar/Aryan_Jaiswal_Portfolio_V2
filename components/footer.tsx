@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { FaLocationArrow } from "react-icons/fa6";
@@ -7,6 +9,14 @@ import { links } from "@/config";
 import { socialMedia } from "@/data";
 
 export const Footer = () => {
+	const handleEmailClick = () => {
+		const email = links.ownerEmail;
+		const subject = encodeURIComponent("Let's Connect!");
+		const body = encodeURIComponent("Hi Aryan,\n\nI came across your portfolio and would love to connect.\n\n");
+		const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
+		window.open(gmailUrl, '_blank');
+	};
+
 	return (
 		<footer id="contact" className="relative w-full pb-10">
 			<div className="absolute inset-0 w-full h-full">
@@ -30,9 +40,9 @@ export const Footer = () => {
 					Let&apos;s connect and explore opportunities together!
 				</p>
 
-				<a
-					href={`mailto:${links.ownerEmail}?subject=Let's Connect!&body=Hi Aryan,%0D%0A%0D%0AI came across your portfolio and would love to connect.%0D%0A%0D%0A`}
-					className="md:mt-10"
+				<button
+					onClick={handleEmailClick}
+					className="md:mt-10 cursor-pointer"
 				>
 					<MagicButton
 						title="Let's get in touch"
@@ -40,7 +50,7 @@ export const Footer = () => {
 						position="right"
 						asChild
 					/>
-				</a>
+				</button>
 			</div>
 
 			<div className="relative z-10 mt-16 flex flex-col items-center justify-between gap-6 md:flex-row md:gap-0">
