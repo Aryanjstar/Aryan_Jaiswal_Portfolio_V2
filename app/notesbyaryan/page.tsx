@@ -71,6 +71,26 @@ const performances = [
     accent: "from-fuchsia-500 to-purple-600",
     pattern: "radial-gradient(circle at 50% 70%, rgba(217, 70, 239, 0.25) 0%, transparent 50%), radial-gradient(circle at 70% 30%, rgba(168, 85, 247, 0.2) 0%, transparent 40%)",
   },
+  {
+    id: 7,
+    title: "Main Rahoon Ya Na Rahoon",
+    titleHindi: "मैं रहूँ या ना रहूँ",
+    description: "Nandi Hills, Bangalore • Armaan Malik Cover",
+    vibe: "कुछ कहूँ या ना कहूँ, तुम मुझको सदा सुनते रहना 🫂",
+    link: "https://www.instagram.com/p/DT-qnIpD2Eb/",
+    accent: "from-emerald-500 to-teal-600",
+    pattern: "radial-gradient(circle at 30% 70%, rgba(16, 185, 129, 0.25) 0%, transparent 50%), radial-gradient(circle at 70% 30%, rgba(20, 184, 166, 0.2) 0%, transparent 40%)",
+  },
+  {
+    id: 8,
+    title: "Qaayde Se",
+    titleHindi: "क़ायदे से",
+    description: "Soulful Cover • Arijit Singh × Papon",
+    vibe: "दिल जला के मुस्कुराने की जो आदत हुई है मुझे…. 🫠",
+    link: "https://www.instagram.com/p/DUiukYvj1pY/",
+    accent: "from-sky-500 to-blue-600",
+    pattern: "radial-gradient(circle at 60% 80%, rgba(14, 165, 233, 0.25) 0%, transparent 50%), radial-gradient(circle at 40% 20%, rgba(37, 99, 235, 0.2) 0%, transparent 40%)",
+  },
 ];
 
 // SVG Pattern component for cards

@@ -4,7 +4,7 @@
 
 A professional-grade portfolio showcasing technical skills, projects, and achievements. Built using modern full-stack technologies with a strong focus on performance, accessibility, and scalability. This application integrates advanced 3D components using `Three.js` and is deployed through a CI/CD pipeline on Netlify with a custom domain.
 
-[![Live Website](https://img.shields.io/badge/Visit-aryanjaiswal.me-blue?style=for-the-badge&logo=vercel)](https://aryanjaiswal.me)
+[![Live Website](https://img.shields.io/badge/Visit-aryanjaiswal.me-blue?style=for-the-badge&logo=vercel)](https://aryanjaiswal.in)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 [![GitHub Repo](https://img.shields.io/badge/Source-GitHub-black?style=for-the-badge&logo=github)](https://github.com/Aryanjstar/Aryan_Jaiswal_Portfolio)
 
@@ -177,7 +177,7 @@ graph TB
 Final Year B.Tech CSE @ IIIT Dharwad
 Full-stack Developer | MERN | Cloud | Open Source
 
-* 🌐 Portfolio: [aryanjaiswal.me](https://aryanjaiswal.me)
+* 🌐 Portfolio: [aryanjaiswal.me](https://aryanjaiswal.in)
 * 📧 Email: [aryanjstar3@gmail.com](mailto:aryanjstar3@gmail.com)
 * 🔗 LinkedIn: [linkedin.com/in/aryanjstar](https://linkedin.com/in/aryanjstar)
 * 🐙 GitHub: [github.com/Aryanjstar](https://github.com/Aryanjstar)
@@ -202,4 +202,4 @@ While this project is personal, meaningful contributions for performance, access
 
 ---
 
-*© 2025 Aryan Jaiswal. All rights reserved.*
+*© 2026 Aryan Jaiswal. All rights reserved.*

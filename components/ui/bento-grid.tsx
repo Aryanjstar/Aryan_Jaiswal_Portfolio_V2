@@ -9,7 +9,6 @@ const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 import { links } from "@/config";
 import { techStack } from "@/data";
-import animationData from "@/data/confetti.json";
 import { cn } from "@/lib/utils";
 
 import { BackgroundGradientAnimation } from "./background-gradient-animation";
@@ -56,6 +55,13 @@ export const BentoGridItem = ({
 	spareImg?: string;
 }) => {
 	const [copied, setCopied] = useState(false);
+	const [confettiData, setConfettiData] = useState<any>(null);
+
+	useEffect(() => {
+		if (id === 6) {
+			import("@/data/confetti.json").then((mod) => setConfettiData(mod.default));
+		}
+	}, [id]);
 
 	const handleCopy = () => {
 		if (typeof window !== "undefined" && navigator.clipboard) {
@@ -169,12 +175,14 @@ export const BentoGridItem = ({
 								tabIndex={-1}
 								className="pointer-events-none absolute -bottom-5 right-0 cursor-default"
 							>
+							{confettiData && (
 								<Lottie
-									animationData={animationData}
+									animationData={confettiData}
 									loop={copied}
 									autoplay={copied}
 									style={{ width: 200, height: 200 }}
 								/>
+							)}
 							</button>
 
 							<MagicButton
