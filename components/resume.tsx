@@ -379,7 +379,8 @@ export const Resume = () => {
 									<p className="text-white-200 mb-1">{edu.institution}</p>
 									<div className="flex justify-between text-white-100 flex-wrap">
 										<span>{edu.duration}</span>
-										<span>{edu.location} &bull; {edu.cgpa}</span>
+										<span>{edu.cgpa}</span>
+										<span>{edu.location}</span>
 									</div>
 								</div>
 							))}
