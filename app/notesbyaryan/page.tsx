@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { FaInstagram, FaPlay, FaSpotify, FaHeadphones, FaArrowLeft } from "react-icons/fa6";
+import { FaInstagram, FaPlay, FaSpotify, FaHeadphones } from "react-icons/fa6";
 import { IoMusicalNotes } from "react-icons/io5";
 import { BsMusicNoteBeamed } from "react-icons/bs";
 import { HiSparkles } from "react-icons/hi2";
@@ -11,9 +11,159 @@ import { HiSparkles } from "react-icons/hi2";
 import { FloatingNav } from "@/components/ui/floating-nav";
 import { Spotlight } from "@/components/ui/spotlight";
 import { navItems } from "@/data";
-import performancesData from "@/data/performances.json";
 
-const performances = performancesData;
+const performances = [
+  {
+    id: 15,
+    title: "I Think They Call This Love",
+    titleHindi: "ये जो दिल में है… शायद इश्क़ है",
+    description: "English Cover • Pure vibes ✨",
+    vibe: "When love finds its own language 🥰",
+    link: "https://www.instagram.com/reel/DXN6uE9D6az/",
+    accent: "from-pink-400 to-rose-600",
+    pattern: "radial-gradient(circle at 40% 60%, rgba(244, 114, 182, 0.25) 0%, transparent 50%), radial-gradient(circle at 70% 30%, rgba(225, 29, 72, 0.2) 0%, transparent 40%)",
+  },
+  {
+    id: 14,
+    title: "Rakh Loon Chupa Ke Main Tumhe",
+    titleHindi: "दिल की तिजोरी में छुपा लूँ तुझे",
+    description: "मुझसे ये हर घड़ी, मेरा दिल कहे 💗",
+    vibe: "तुम ही मेरी हर जुस्तजू… तुम ही आरज़ू 🫶🏻",
+    link: "https://www.instagram.com/reel/DW8xRDWToOF/",
+    accent: "from-rose-500 to-pink-600",
+    pattern: "radial-gradient(circle at 30% 70%, rgba(244, 63, 94, 0.25) 0%, transparent 50%), radial-gradient(circle at 70% 20%, rgba(236, 72, 153, 0.2) 0%, transparent 40%)",
+  },
+  {
+    id: 13,
+    title: "Angaara",
+    titleHindi: "जलता हुआ दिल, बुझने का नाम नहीं",
+    description: "मैंने इश्क़ सिखा, मैंने प्यार सिखा 🥀",
+    vibe: "तू चाहे नफ़रतें कर… मेरे इम्तिहान तू जो ले रहा है",
+    link: "https://www.instagram.com/reel/DWeKxNJj764/",
+    accent: "from-amber-500 to-orange-600",
+    pattern: "radial-gradient(circle at 60% 80%, rgba(245, 158, 11, 0.25) 0%, transparent 50%), radial-gradient(circle at 20% 40%, rgba(249, 115, 22, 0.2) 0%, transparent 40%)",
+  },
+  {
+    id: 12,
+    title: "Dhun",
+    titleHindi: "मोहब्बत की वो एक धुन",
+    description: "है यही एक धुन जो दिल में बसी है 🎶",
+    vibe: "है यही एक धुन… मोहब्बत की धुन 🎵",
+    link: "https://www.instagram.com/reel/DV1NlyCj_yI/",
+    accent: "from-cyan-500 to-teal-600",
+    pattern: "radial-gradient(circle at 80% 60%, rgba(6, 182, 212, 0.25) 0%, transparent 50%), radial-gradient(circle at 30% 20%, rgba(20, 184, 166, 0.2) 0%, transparent 40%)",
+  },
+  {
+    id: 11,
+    title: "Tum Hi Ho",
+    titleHindi: "अब तुम ही हो… ज़िन्दगी अब तुम ही हो",
+    description: "Aashiqui 2 feels 🫶🏻",
+    vibe: "Ab tum hi ho… zindagi ab tum hi ho",
+    link: "https://www.instagram.com/reel/DVZCG03jy-G/",
+    accent: "from-indigo-500 to-violet-600",
+    pattern: "radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.3) 0%, transparent 50%), radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.2) 0%, transparent 40%)",
+  },
+  {
+    id: 10,
+    title: "Mere Naam Tu",
+    titleHindi: "बस इतना ही काफ़ी है… मेरे नाम तू",
+    description: "Corporate life mein bhi dil gaata hai 🧿",
+    vibe: "Mere naam tu… bas itna hi kaafi hai",
+    link: "https://www.instagram.com/reel/DVIX14Pj_oG/",
+    accent: "from-emerald-500 to-teal-600",
+    pattern: "radial-gradient(circle at 30% 70%, rgba(16, 185, 129, 0.25) 0%, transparent 50%), radial-gradient(circle at 70% 30%, rgba(20, 184, 166, 0.2) 0%, transparent 40%)",
+  },
+  {
+    id: 9,
+    title: "Khat",
+    titleHindi: "वो एक ख़त जो दिल ने लिखा",
+    description: "SHE:- What is love for you? Me:- ….. 🥹",
+    vibe: "Love is choosing the same person… every single day :>",
+    link: "https://www.instagram.com/reel/DUs_-siD7CG/",
+    accent: "from-rose-400 to-red-600",
+    pattern: "radial-gradient(circle at 50% 60%, rgba(251, 113, 133, 0.25) 0%, transparent 50%), radial-gradient(circle at 30% 30%, rgba(239, 68, 68, 0.2) 0%, transparent 40%)",
+  },
+  {
+    id: 1,
+    title: "Qaayde Se",
+    titleHindi: "क़ायदे से",
+    description: "दिल जला के मुस्कुराने की आदत 🫠",
+    vibe: "दिल जला के मुस्कुराने की जो आदत हुई है मुझे….",
+    link: "https://www.instagram.com/p/DUiukYvj1pY/",
+    accent: "from-sky-500 to-blue-600",
+    pattern: "radial-gradient(circle at 60% 80%, rgba(14, 165, 233, 0.25) 0%, transparent 50%), radial-gradient(circle at 40% 20%, rgba(37, 99, 235, 0.2) 0%, transparent 40%)",
+  },
+  {
+    id: 2,
+    title: "Main Rahoon Ya Na Rahoon",
+    titleHindi: "मैं रहूँ या ना रहूँ",
+    description: "Nandi Hills, Bangalore 🏔️",
+    vibe: "कुछ कहूँ या ना कहूँ, तुम मुझको सदा सुनते रहना 🫂",
+    link: "https://www.instagram.com/p/DT-qnIpD2Eb/",
+    accent: "from-emerald-500 to-teal-600",
+    pattern: "radial-gradient(circle at 30% 70%, rgba(16, 185, 129, 0.25) 0%, transparent 50%), radial-gradient(circle at 70% 30%, rgba(20, 184, 166, 0.2) 0%, transparent 40%)",
+  },
+  {
+    id: 3,
+    title: "Ho Gaya Hai Tujhko",
+    titleHindi: "हो गया है तुझको तो प्यार सजना",
+    description: "Dil ki awaaz, aap tak 🫣",
+    vibe: "Jab dil ne finally baat keh di",
+    link: "https://www.instagram.com/p/DTnamJTjzLB/",
+    accent: "from-rose-500 to-pink-600",
+    pattern: "radial-gradient(circle at 30% 70%, rgba(244, 63, 94, 0.25) 0%, transparent 50%), radial-gradient(circle at 70% 20%, rgba(236, 72, 153, 0.2) 0%, transparent 40%)",
+  },
+  {
+    id: 4,
+    title: "Barbaad",
+    titleHindi: "बर्बाद",
+    description: "Kar dega Barbaad ishq mujhe 🎶",
+    vibe: "When love hits different",
+    link: "https://www.instagram.com/p/DSwpvRij4BW/",
+    accent: "from-amber-500 to-orange-600",
+    pattern: "radial-gradient(circle at 60% 80%, rgba(245, 158, 11, 0.25) 0%, transparent 50%), radial-gradient(circle at 20% 40%, rgba(249, 115, 22, 0.2) 0%, transparent 40%)",
+  },
+  {
+    id: 5,
+    title: "Haal-E-Dil",
+    titleHindi: "हाल-ए-दिल",
+    description: "काश यूं होता, हर शाम साथ तू होता 🫠",
+    vibe: "चुपचप दिल ना यूं रोता",
+    link: "https://www.instagram.com/p/DSh1nnYj3xF/",
+    accent: "from-cyan-500 to-teal-600",
+    pattern: "radial-gradient(circle at 80% 60%, rgba(6, 182, 212, 0.25) 0%, transparent 50%), radial-gradient(circle at 30% 20%, rgba(20, 184, 166, 0.2) 0%, transparent 40%)",
+  },
+  {
+    id: 6,
+    title: "Khamoshiyan",
+    titleHindi: "खामोशियाँ",
+    description: "Cover • Arijit Singh vibes ✨",
+    vibe: "खामोशियाँ आकाश है, तुम उड़ने तो आओ ज़रा :)",
+    link: "https://www.instagram.com/p/DSAwZVzk950/",
+    accent: "from-violet-500 to-purple-600",
+    pattern: "radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.2) 0%, transparent 40%)",
+  },
+  {
+    id: 7,
+    title: "Mujhe Tum Nazar Se",
+    titleHindi: "मुझे तुम नज़र से",
+    description: "Soulful Cover",
+    vibe: "When words fail, music speaks",
+    link: "https://www.instagram.com/reel/DR0dnM5k46A/",
+    accent: "from-indigo-500 to-violet-600",
+    pattern: "radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.3) 0%, transparent 50%), radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.2) 0%, transparent 40%)",
+  },
+  {
+    id: 8,
+    title: "Har Kisi Ko",
+    titleHindi: "हर किसी को नहीं मिलता",
+    description: "Farewell '26 • IIIT Dharwad",
+    vibe: "The night I poured my heart out on stage",
+    link: "https://www.instagram.com/reel/DRdYboGjBq-/",
+    accent: "from-fuchsia-500 to-purple-600",
+    pattern: "radial-gradient(circle at 50% 70%, rgba(217, 70, 239, 0.25) 0%, transparent 50%), radial-gradient(circle at 70% 30%, rgba(168, 85, 247, 0.2) 0%, transparent 40%)",
+  },
+];
 
 // SVG Pattern component for cards
 const MusicPattern = ({ className }: { className?: string }) => (
@@ -58,7 +208,19 @@ const MusicPattern = ({ className }: { className?: string }) => (
 export default function NotesbyAryan() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-black-100">
+      {/* Navigation */}
       <FloatingNav navItems={navItems} />
+
+      {/* Back to Home */}
+      <div className="relative z-10 mx-auto max-w-6xl px-6 pt-24">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 text-sm text-white-200/60 transition-colors hover:text-white"
+        >
+          <span>←</span>
+          <span>Back to Home</span>
+        </Link>
+      </div>
 
       {/* Spotlights - matching main portfolio */}
       <div>
@@ -108,15 +270,7 @@ export default function NotesbyAryan() {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 mx-auto max-w-6xl px-6 pt-36 pb-16 md:pb-24">
-        <Link
-          href="/"
-          className="mb-8 inline-flex items-center gap-2 text-sm text-purple hover:text-white transition-colors"
-        >
-          <FaArrowLeft className="text-xs" />
-          Back to Home
-        </Link>
-
+      <div className="relative z-10 mx-auto max-w-6xl px-6 py-16 md:py-24">
         {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0 }}
