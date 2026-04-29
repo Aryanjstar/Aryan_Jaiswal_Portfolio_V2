@@ -54,7 +54,7 @@ export const Hero = () => {
 				<div className="flex max-w-[89vw] flex-col items-center justify-center md:max-w-2xl lg:max-w-[60vw]">
 					<motion.h2
 						variants={fadeUp}
-						className="max-w-96 text-center text-xs uppercase tracking-widest text-blue-100"
+						className="text-center text-xs uppercase tracking-widest text-blue-100"
 					>
 						AI Engineer &bull; Published Researcher &bull; Full Stack Developer
 					</motion.h2>
