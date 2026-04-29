@@ -119,4 +119,4 @@ logs
 .azure/
 
 # Sentry
-.sentryclirc 
+.sentryclirc aryan_cv/
