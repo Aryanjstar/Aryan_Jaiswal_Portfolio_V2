@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main, "redesign/**"]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium webkit firefox
+      - name: Start the production server
+        run: npx next start -p 3100 & npx -y wait-on http://localhost:3100
+      - run: npm run test:content
+        env: { BASE_URL: "http://localhost:3100" }
+      - run: npm run check:budget
+      - run: npm run test:e2e
+      - name: Link check (external sites can be flaky; reported, not blocking)
+        run: npm run check:links
+        env: { BASE_URL: "http://localhost:3100" }
+        continue-on-error: true

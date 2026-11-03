@@ -121,3 +121,13 @@ logs
 # Sentry
 .sentryclirc aryan_cv/
 Aryan_Resume.pdf
+
+# Playwright
+test-results/
+playwright-report/
+# Raw Lighthouse JSON (scores are summarised in docs/redesign/PROGRESS.md)
+docs/redesign/lighthouse/
+# Review screenshots stay on the machine that took them (tens of MB); PROGRESS.md records the results
+docs/redesign/screens/
+docs/redesign/baseline/
+.vercel/
