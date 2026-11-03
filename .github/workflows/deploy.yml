@@ -1,0 +1,48 @@
+name: Deploy
+
+# Ships to Vercel after CI passes. Production on `main`, a preview for every other branch.
+# Needs three repository secrets (Settings → Secrets and variables → Actions):
+#   VERCEL_TOKEN, VERCEL_ORG_ID, VERCEL_PROJECT_ID   (see docs/DEPLOY.md)
+# If they're missing, the job is skipped instead of failing, so forks and local-only setups stay green.
+
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+
+jobs:
+  deploy:
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    environment: ${{ github.event.workflow_run.head_branch == 'main' && 'production' || 'preview' }}
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      TARGET: ${{ github.event.workflow_run.head_branch == 'main' && 'production' || 'preview' }}
+    steps:
+      - name: Skip when Vercel secrets are not configured
+        if: env.VERCEL_TOKEN == ''
+        run: echo "VERCEL_TOKEN not set; skipping deploy (see docs/DEPLOY.md)."
+      - uses: actions/checkout@v4
+        if: env.VERCEL_TOKEN != ''
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+      - uses: actions/setup-node@v4
+        if: env.VERCEL_TOKEN != ''
+        with:
+          node-version: 22
+          cache: npm
+      - name: Pull Vercel settings
+        if: env.VERCEL_TOKEN != ''
+        run: npx -y vercel@latest pull --yes --environment=$TARGET --token=$VERCEL_TOKEN
+      - name: Build
+        if: env.VERCEL_TOKEN != ''
+        run: npx -y vercel@latest build ${{ env.TARGET == 'production' && '--prod' || '' }} --token=$VERCEL_TOKEN
+      - name: Deploy
+        if: env.VERCEL_TOKEN != ''
+        id: deploy
+        run: |
+          url=$(npx -y vercel@latest deploy --prebuilt ${{ env.TARGET == 'production' && '--prod' || '' }} --token=$VERCEL_TOKEN)
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+          echo "Deployed ($TARGET): $url" >> "$GITHUB_STEP_SUMMARY"

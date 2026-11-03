@@ -1,38 +1,27 @@
-"use client";
+import type { Metadata } from "next";
 
-import Link from "next/link";
-import { FaArrowLeft } from "react-icons/fa6";
-import { motion } from "framer-motion";
+import { ResumeActions } from "@/components/resume/resume-actions";
+import { ResumeDoc } from "@/components/resume/resume-doc";
+import { resumePdf } from "@/content/profile";
+import { pdfFor, roles } from "@/content/roles";
+import type { RoleKey } from "@/content/schema";
 
-import { FloatingNav } from "@/components/ui/floating-nav";
-import { Footer } from "@/components/footer";
-import { Resume } from "@/components/resume";
-import { navItems } from "@/data";
+// Which PDF the single Download button serves for each ?role= (resolved here so the client bundle stays small).
+const PDF_BY_ROLE = Object.fromEntries((Object.keys(roles) as RoleKey[]).map((r) => [r, pdfFor(r).href]));
 
-export default function ResumePage() {
-	return (
-		<main className="relative mx-auto flex flex-col items-center justify-center overflow-hidden bg-black-100 px-5 sm:px-10">
-			<div className="w-full max-w-7xl">
-				<FloatingNav navItems={navItems} />
+export const metadata: Metadata = {
+  title: "Resume",
+  description: "Aryan Jaiswal's resume: Forward Deployed Engineer at Exotel, IIIT Dharwad CSE '26.",
+  alternates: { canonical: "/resume" },
+};
 
-				<motion.div
-					initial={{ opacity: 0 }}
-					animate={{ opacity: 1 }}
-					transition={{ duration: 0.2 }}
-					className="pt-36"
-				>
-					<Link
-						href="/"
-						className="mb-8 inline-flex items-center gap-2 text-sm text-purple hover:text-white transition-colors"
-					>
-						<FaArrowLeft className="text-xs" />
-						Back to Home
-					</Link>
-				</motion.div>
-
-				<Resume />
-				<Footer />
-			</div>
-		</main>
-	);
+/** F16. Rendered from content/, the single source. Always light when printed. */
+export default function Resume() {
+  return (
+    <div className="bg-bg">
+      <div className="mx-auto max-w-[820px] px-5 pb-24 pt-10 md:pt-16">
+        <ResumeDoc actions={<ResumeActions general={resumePdf.general} byRole={PDF_BY_ROLE} />} />
+      </div>
+    </div>
+  );
 }
