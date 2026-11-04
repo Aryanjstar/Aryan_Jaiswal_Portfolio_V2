@@ -32,7 +32,7 @@ export const roles: Record<RoleKey, RoleDef> = {
     word: "AI engineer",
     article: "an",
     pdf: "aiFde",
-    sub: "14+ LLM voice agents in production across 5 languages, an eval and prompt-optimization harness with chat → voice → real-call simulation, and multi-agent apps like AURA.",
+    sub: "10+ LLM voice agents in production across 5 languages, an eval and prompt-optimization harness with chat → voice → real-call simulation, and multi-agent apps like AURA.",
   },
   backend: {
     label: "Backend",

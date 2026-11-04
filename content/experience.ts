@@ -14,7 +14,7 @@ export const exotel = {
       title: "Forward Deployed Engineer",
       dates: "Jun 2026 – Present",
       bullets: [
-        { text: "Shipped 14+ LLM voice agents to production in 5 languages and took 16 bots for 15+ clients through formal evaluation, owning requirements, prompts, tool/KB design, integrations and go-live.", strong: "14+ LLM voice agents to production", roles: ["ai", "fde"] },
+        { text: "Shipped 10+ LLM voice agents to production in 5 languages and took 16 bots for 15+ clients through formal evaluation, owning requirements, prompts, tool/KB design, integrations and go-live.", strong: "10+ LLM voice agents to production", roles: ["ai", "fde"] },
         { text: "Ran client calls, demos and requirement sessions with CSM and sales across 10+ accounts, turning call feedback into same-day fixes.", roles: ["fde"] },
         { text: "Built AutoLoop inside Argus: a 7-stage workflow in an agentic harness with symlinked bot repos and 16 skills. It generates scenarios, compares prompt techniques in chat simulations, selects winners and rolls back regressions.", strong: "AutoLoop", roles: ["ai", "backend"], caseStudy: "argus-autoloop" },
         { text: "Built Argus's in-house voice simulator for tests between chat simulations and real calls; made Argus/AutoLoop usable from AI coding tools (Cursor, Claude Code). Harness used on 10+ builds; bot delivery went from ~1 week to 1–2 days (estimate).", strong: "in-house voice simulator", roles: ["ai", "fde"], caseStudy: "argus-autoloop" },
