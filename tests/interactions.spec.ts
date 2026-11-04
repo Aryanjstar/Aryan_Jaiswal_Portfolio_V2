@@ -130,7 +130,7 @@ test.describe("reduced motion", () => {
     await page.goto("/");
     await page.locator(".terminal").scrollIntoViewIfNeeded();
     await expect(page.locator(".terminal")).toContainText("open to new roles");
-    await expect(page.locator(".hl-card").first()).toContainText("14+");
+    await expect(page.locator(".hl-card").first()).toContainText("10+");
     // Key-phrase highlight is invisible at rest (it only sweeps in on hover).
     expect(await page.locator(".marker").first().evaluate((el) => getComputedStyle(el).backgroundSize)).toBe("0% 100%");
     expect(await page.locator(".status-dot").first().evaluate((el) => getComputedStyle(el, "::after").animationName)).toBe("none");

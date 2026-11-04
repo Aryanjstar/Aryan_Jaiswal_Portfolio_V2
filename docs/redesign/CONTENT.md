@@ -45,7 +45,7 @@ Conventions: `[roles: …]` tags feed the Role Lens (`sde`, `ai`, `backend`, `fr
 |---|---|
 | all | Forward Deployed Engineer at Exotel and a CS grad from IIIT Dharwad ('26). I've shipped LLM voice agents to production, built the eval platform behind them, wired the integrations, automated the pipelines, and built full-stack products on the side. |
 | sde | CS grad (IIIT Dharwad '26) shipping production code since 2025: platform features, integrations and tooling at Exotel, plus 867 LeetCode problems and a COMSNETS 2026 paper. |
-| ai | 14+ LLM voice agents in production across 5 languages, an eval and prompt-optimization harness with chat → voice → real-call simulation, and multi-agent apps like AURA. |
+| ai | 10+ LLM voice agents in production across 5 languages, an eval and prompt-optimization harness with chat → voice → real-call simulation, and multi-agent apps like AURA. |
 | backend | Signed integration routes, retries and guards, batching that took bulk loads from 25 to 2 minutes, and FastAPI/Redis services behind a voice-AI platform. |
 | frontend | React and TypeScript, from a shipped test-framework UI at Exotel to a 61-route Next.js wedding platform. And this site, built from scratch to a performance budget. |
 | fullstack | End to end: FastAPI and Node backends, React/Next.js frontends, MongoDB and Postgres, CI with Playwright, deployed on Vercel and Azure. |
@@ -58,7 +58,7 @@ Conventions: `[roles: …]` tags feed the Role Lens (`sde`, `ai`, `backend`, `fr
 
 | Big | Label | Scope note (required) | roles |
 |---|---|---|---|
-| `14+` | LLM voice agents in production | Exotel; 5 languages; 16 bots for 15+ clients through formal eval | ai, fde, all |
+| `10+` | LLM voice agents in production | Exotel; 5 languages; 16 bots for 15+ clients through formal eval | ai, fde, all |
 | `313/313` | integration route checks passed | Hotel-booking provider migration, staging harness; plus 114/114 booking checks | backend, sde, fde |
 | `25→2 min` | bulk lead loads | ~10K-row lists; ~10,000 requests → ~150 via batching and pacing | backend, devops, sde |
 | `1→8` | WebSocket workers behind NGINX | Pipecat media pipeline, least_conn, with Prometheus/Grafana monitoring and 5 Ansible roles (worker count, not a capacity multiple) | devops, backend |
@@ -74,7 +74,7 @@ With `all`, show: 7 · 313/313 · 25→2 min · 1→8 · 61 · 867.
 ### Exotel — voice AI / conversational AI platform · Bangalore
 
 **Forward Deployed Engineer · Jun 2026–Present**
-1. Shipped **14+ LLM voice agents to production** in 5 languages and took 16 bots for 15+ clients through formal evaluation, owning requirements, prompts, tool/KB design, integrations and go-live. `[ai, fde]`
+1. Shipped **10+ LLM voice agents to production** in 5 languages and took 16 bots for 15+ clients through formal evaluation, owning requirements, prompts, tool/KB design, integrations and go-live. `[ai, fde]`
 2. Ran client calls, demos and requirement sessions with CSM and sales across 10+ accounts, turning call feedback into same-day fixes. `[fde]`
 3. Built **AutoLoop** inside Argus: a 7-stage workflow in an agentic harness with symlinked bot repos and 16 skills. It generates scenarios, compares prompt techniques in chat simulations, selects winners and rolls back regressions. → case study `argus-autoloop` `[ai, backend]`
 4. Built Argus's **in-house voice simulator** for tests between chat simulations and real calls; made Argus/AutoLoop usable from AI coding tools (Cursor, Claude Code). Harness used on 10+ builds; bot delivery went from ~1 week to 1–2 days (estimate). → `argus-autoloop` `[ai, fde]`
