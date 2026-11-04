@@ -138,7 +138,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "enterprise-integrations",
     kicker: "Backend · Integrations",
     title: "The plumbing behind a voice agent",
-    outcome: "A signed, guarded hotel-booking migration that passed 313/313 route checks, and a campaign pipeline that turned 25-minute loads into 2.",
+    outcome: "A signed, guarded hotel-booking migration that passed 313/313 route checks in staging, and a campaign pipeline that turned 25-minute loads into 2.",
     tldr: [
       "Moved a six-property hotel-booking agent to a new provider over 4 HMAC-signed Apache Camel routes: 313/313 route and 114/114 booking checks on staging, then the production cutover.",
       "Automated a twice-daily campaign pipeline: 150K lead entries so far; batching cut ~10K-row loads from ~25 to ~2 minutes.",
@@ -185,7 +185,7 @@ export const caseStudies: CaseStudy[] = [
         steps: [
           { when: "Oct 12–13", text: "Initial integration build", state: "note" },
           { when: "Oct 14", text: "Live bot wired to provider staging", state: "pass", stage: "Session setup" },
-          { when: "Oct 23", text: "114/114 booking checks", state: "pass", stage: "Booking + per-session guard" },
+          { when: "Oct 23", text: "114/114 booking checks in staging", state: "pass", stage: "Booking + per-session guard" },
           { when: "→ Nov 1", text: "Hardening and vendor feedback", state: "fix" },
           { when: "Nov 2, 14:31 IST", text: "Production cutover; two check calls confirm bookings", state: "pass" },
         ],

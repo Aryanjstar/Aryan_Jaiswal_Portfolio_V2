@@ -57,7 +57,7 @@ export const profile = {
   },
 } as const;
 
-// D-36 (Aryan, 3 Nov 2026): the PDFs carry his phone number. Source: Aryan_Resume_Context/output/pdf (3 Nov build: Kinetic 150K).
+// The PDFs carry Aryan's phone number; the current variants were supplied on 4 Nov 2026.
 // The HTML pages still don't print the number (crawlable).
 export const resumePdf = {
   general: "/resume/Aryan-Jaiswal-Resume.pdf",
