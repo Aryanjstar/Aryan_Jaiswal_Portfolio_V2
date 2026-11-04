@@ -9,8 +9,7 @@ export const recognition: Recognition[] = [
     title: "A Bid-Driven Optimization Framework for Real-Time Electric Vehicle Charging Scheduling",
     detail: "Main conference, pp. 60–66. With Pranay Ch., Vinay Jain, Malay Kumar.",
     links: [
-      { label: "DOI", href: "https://ieeexplore.ieee.org/document/11418229" },
-      { label: "Paper", href: "https://drive.google.com/file/d/1BIn6lJDBAFv0X1xafRWhf47dfCS2loqz/view?usp=sharing" },
+      { label: "IEEE Xplore publication", href: "https://ieeexplore.ieee.org/document/11418229" },
     ],
   },
   {
@@ -37,7 +36,7 @@ export const recognition: Recognition[] = [
   {
     kicker: "Problem solving",
     title: "867 LeetCode problems (165 hard)",
-    detail: "GeeksforGeeks institute rank 2 at IIIT Dharwad.",
+    detail: "October 2026 snapshot. GeeksforGeeks institute rank 2 at IIIT Dharwad.",
     links: [
       { label: "LeetCode", href: "https://leetcode.com/u/aryanjstar/" },
       { label: "GeeksforGeeks", href: "https://www.geeksforgeeks.org/profile/aryanjstar" },
